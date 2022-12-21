@@ -1,0 +1,12 @@
+/node_modules/**
+/dist/
+/dist*
+/public/*
+/docs/*
+/vite.config.ts
+/docs/**/*
+/plop/**/*
+**/*.svg
+**/*.sh
+pnpm-lock.yaml
+CHANGELOG

@@ -1,0 +1,71 @@
+{
+  "compilerOptions": {
+    // 指定编译后的版本目录
+    "target": "ESNext",
+    //useDefineForClassFields 是 TypeScript 3.7.0 中新增的一个编译选项（详见 PR），启用后的作用是将 class 声明中的字段语义从 [[Set]] 变更到 [[Define]]
+    "useDefineForClassFields": true,
+    // 指定要使用的模板标准
+    "module": "ESNext",
+    // 模块解析
+    "moduleResolution": "Node",
+    // 严格检查
+    "strict": false,
+    //  不对 JSX 进行改变并生成 .jsx 文件
+    "jsx": "preserve",
+    // 指定是否引入tslib里的复制工具函数
+    "importHelpers": true,
+    // 允许导入导出扩展名为”.json“的模块
+    "resolveJsonModule": true,
+    // 将每个文件作为单独的模块
+    "isolatedModules": true,
+    // 通过导入内容创建命名空间，实现CommonJS和ES模块之间的互操作性，支持使用import d from 'cjs'的方式引入commonjs包
+    "esModuleInterop": true,
+    // 指定允许从没有默认导出的模块中默认导入
+    "allowSyntheticDefaultImports":true,
+    // 在文件中强制使用一致的大小写
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["ESNext", "DOM"],
+    // 编译时是否生成.map文件
+    "sourceMap": true,
+    // 指定是否允许编译JS文件
+    "allowJs": false,
+    // 跳过对声明文件的类型检查
+    "skipLibCheck": true,
+    // 不生成编译文件
+    "noEmit": true,
+    // 增量 使 TypeScript 将上次编译的工程图信息保存到磁盘上的文件中
+    "incremental": true,
+    // 解析非相对模块名称的基本目录，相对模块不会受到baseUrl的影响
+    "baseUrl": ".",
+    // 设置模块名到基于baseUrl的路径映射
+    "paths":{
+      "@/*":["src/*"],
+      "@build/*":["build/*"],
+      "#/*":["types/*"]
+    },
+    // 指定需要包含的模块，这里的模块的声明文件才会被加载
+    "types": [
+      "node",
+      "vite/client"
+    ],
+    // 指定声明文件或文件夹的路径列表，如果指定，则只有这里列出的声明文件才会被加载
+    "typeRoots": ["./node_modules/@types/", "./types"]
+  },
+  // 指定要编译的路径列表
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "types/*.d.ts",
+    "types/*.ts",
+    "mock/*.ts",
+    "build/*.ts",
+    "build/*.d.ts",
+    "mock/*.ts",
+    "vite.config.ts"
+  ],
+  // 排除的，不编译的文件或文件夹，可以是相对路径
+  "exclude": ["node_modules", "dist", "**/*.js", "index.html"]
+  // "references": [{ "path": "./tsconfig.node.json" }]
+}
