@@ -23,6 +23,7 @@ module.exports = defineConfig({
     TargetContext: 'readonly',
     ComponentElRef: 'readonly',
     ComponentRef: 'readonly',
+    ElRef: 'readonly',
     global: 'readonly',
     ForDataType: 'readonly',
     ComponentRoutes: 'readonly',
