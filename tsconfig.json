@@ -40,8 +40,7 @@
     // 设置模块名到基于baseUrl的路径映射
     "paths": {
       "@/*": ["src/*"],
-      "@build/*": ["build/*"],
-      "#/*": ["types/*"]
+      "@build/*": ["build/*"]
     },
     // 指定需要包含的模块，这里的模块的声明文件才会被加载
     "types": ["node", "vite/client"],

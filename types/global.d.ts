@@ -16,6 +16,22 @@ declare global {
   }
 
   /**
+   * Window 的类型提示
+   */
+  interface Window {
+    // Global vue app instance
+    __APP__: App<Element>
+    webkitCancelAnimationFrame: (handle: number) => void
+    mozCancelAnimationFrame: (handle: number) => void
+    oCancelAnimationFrame: (handle: number) => void
+    msCancelAnimationFrame: (handle: number) => void
+    webkitRequestAnimationFrame: (callback: FrameRequestCallback) => number
+    mozRequestAnimationFrame: (callback: FrameRequestCallback) => number
+    oRequestAnimationFrame: (callback: FrameRequestCallback) => number
+    msRequestAnimationFrame: (callback: FrameRequestCallback) => number
+  }
+
+  /**
    * 打包压缩格式的类型声明
    */
   type ViteCompression =
