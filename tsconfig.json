@@ -21,7 +21,7 @@
     // 通过导入内容创建命名空间，实现CommonJS和ES模块之间的互操作性，支持使用import d from 'cjs'的方式引入commonjs包
     "esModuleInterop": true,
     // 指定允许从没有默认导出的模块中默认导入
-    "allowSyntheticDefaultImports":true,
+    "allowSyntheticDefaultImports": true,
     // 在文件中强制使用一致的大小写
     "forceConsistentCasingInFileNames": true,
     "lib": ["ESNext", "DOM"],
@@ -38,16 +38,13 @@
     // 解析非相对模块名称的基本目录，相对模块不会受到baseUrl的影响
     "baseUrl": ".",
     // 设置模块名到基于baseUrl的路径映射
-    "paths":{
-      "@/*":["src/*"],
-      "@build/*":["build/*"],
-      "#/*":["types/*"]
+    "paths": {
+      "@/*": ["src/*"],
+      "@build/*": ["build/*"],
+      "#/*": ["types/*"]
     },
     // 指定需要包含的模块，这里的模块的声明文件才会被加载
-    "types": [
-      "node",
-      "vite/client"
-    ],
+    "types": ["node", "vite/client"],
     // 指定声明文件或文件夹的路径列表，如果指定，则只有这里列出的声明文件才会被加载
     "typeRoots": ["./node_modules/@types/", "./types"]
   },
